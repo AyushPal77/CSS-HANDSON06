@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/shara\ desert.jpg);
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+}
+.logo img{
+    width: 80px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+li{
+    list-style: none;
+    color: white;
+    padding: 15px 20px;
+    margin: 0 20px;
+}
+
+li::before{
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    border-bottom: 1px solid white;
+    transition: all 0.5s linear;
+    width: 0%;
+  
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+}
+.leftcontainer>p{
+    line-height: 30px;
+    font-size: 20px;
+    /* margin-top: 50px; */
+}
+h1{
+    font-weight: bold;
+    font-size: 100px;
+}
+button{
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+.rightcontainer{
+    display: grid;
+    grid-template-columns:230px 230px ;
+    grid-auto-rows: 260px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.box{
+    border-radius: 10px;
+    transition: transform 0.3s linear;
+}
+.box:hover{
+    transform: translateY(-10px);
+}
+
+.box1{
+    background-image: url(./images/pic-1.png);
+    background-size: cover;
+    font-weight: bold;
+    padding: 15px 25px;
+}
+.box p{
+    font-size: 10px;
+    line-height: 25px;
+}
+
+.box2{
+    background-image: url(./images/pic-2.png);
+    background-size: cover;
+    font-weight: bold;
+    padding: 15px 25px;
+}
+
+.box3{
+    background-image: url(./images/pic-3.png);
+    background-size: cover;
+    font-weight: bold;
+    padding: 15px 25px;
+}
+
+.box4{
+    background-image: url(./images/pic-4.png);
+    background-size: cover;
+    font-weight: bold;
+    padding: 15px 25px;
+}
+
+/* tablet view */
+@media screen and (max-width:1000px) {
+    header{
+        padding-bottom: 0;
+    }
+    li{
+        padding: 10px 10px;
+        margin: 0 5px;
+    }
+    section{
+        flex-direction: column;
+        padding: 0 6.3rem;
+        column-gap: 0;
+        align-items: flex-start;
+    }
+    .leftcontainer>p{
+        font-size: 17px;
+    }
+    .leftcontainer>h1{
+        font-size: 30px;
+    }
+    .rightcontainer{
+        margin: 40px 0;
+        width: 100%;
+        grid-template-columns: 70%;
+        row-gap: 30px;
+        justify-content: center;
+    }
+    .box{
+        background-position: center;
+    }
+}
+
+
+
+/* mobile view */
+@media screen and (max-width: 500px) {
+    header{
+        padding: 10px 3rem;
+        align-items: center;
+    }
+    section{
+        padding: 0 3rem;
+    }
+    ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    li{
+        padding: 5px 6px;
+    }
+    .nav-bar{
+        padding-left: 0;
+    }
+    .rightcontainer{
+        grid-template-columns: 75%;
+    }
+    .leftcontainer>p{
+        font-size: 15px;
+    }
+}
